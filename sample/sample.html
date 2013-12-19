@@ -1,0 +1,52 @@
+
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="30">
+  <meta name="viewport" content="width=device-width" />
+  <title>Timeline</title>
+  <style type="text/css" media="screen">
+    body {
+      margin:10px;
+      padding:0;
+      font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      font-family: "HelveticaNeue-UltraLight", Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      font-size: 20pt;
+    }
+  </style>
+  <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization', 'version':'1','packages':['timeline']}]}"></script>
+  <script type="text/javascript">
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var container = document.getElementById('timeline');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'string', id: 'Team' });
+    dataTable.addColumn({ type: 'string', id: 'Task' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+      ['Today', 'Today', new Date(), new Date()],
+      ["KKBOX Mac", "Task 1", new Date(2013, 11, 1), new Date(2013, 11, 30)],
+      ["KKBOX Mac", "Task 2", new Date(2013, 11, 8), new Date(2014, 0, 8)],
+      ["KKBOX Windows", "Task 1", new Date(2013, 11, 1), new Date(2013, 11, 30)],
+      ["KKBOX Windows", "Task 2", new Date(2013, 11, 8), new Date(2014, 0, 8)],
+  ]);
+  var options = {
+    timeline: {
+      colorByRowLabel: true,
+      barLabelStyle: {fontSize:10}
+    }
+  };
+  chart.draw(dataTable, options);
+}
+</script>
+</head>
+<body>
+<h1>Timeline</h1>
+<div id="timeline" style="width: 100%; height: 100%"></div>
+</body>
+</html>
