@@ -59,6 +59,6 @@ Your YAML document should look like
 
 The rendered HTML will look like
 
-..image:: https://raw.github.com/zonble/yaml2timeline/master/sample/sample.png
+.. image:: https://raw.github.com/zonble/yaml2timeline/master/sample/sample.png
 
 Enjoy it!
