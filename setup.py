@@ -18,7 +18,7 @@ required = ['pycli', 'pyyaml']
 setup(
     name='yaml2timeline',
     version=0.1,
-    description='Simply convert a YAML document into HTML timeline.',
+    description='Simply converts a YAML document into HTML timeline table.',
     author='Weichong Yang',
     author_email='zonble@gmail.com',
     url='https://github.com/zonble/yaml2timeline',
