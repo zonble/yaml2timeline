@@ -57,4 +57,8 @@ Your YAML document should look like
 	- {title: <Task 1>, begin: 2013-12-01, end: 2013-12-30}
 	- {title: <Task 2>, begin: 2013-12-08, end: 2014-01-08}
 
+The rendered HTML will look like
+
+..image:: https://raw.github.com/zonble/yaml2timeline/master/sample/sample.png
+
 Enjoy it!
