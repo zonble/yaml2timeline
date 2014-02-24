@@ -86,7 +86,7 @@ class YAML2TimelineHTMLRenderer:
                 html = YAML2TimelineHTMLRenderer.TEMPLATE_HEADER + rows +\
                        YAML2TimelineHTMLRenderer.TEMPLATE_FOOTER
         with open(output_file, 'w') as f:
-            f.write(html)
+            f.write(html.encode('utf8'))
 
 @cli.app.CommandLineApp
 def yaml2timeline(app):
