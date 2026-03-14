@@ -1,6 +1,20 @@
 yaml2timeline
 =============
 
+.. note::
+
+   **本專案已停止維護，視為歷史遺留（Legacy）專案。**
+
+   原因如下：
+
+   - 本專案撰寫於 2013 年，目標環境為 Python 2，而 Python 2 已於 2020 年 1 月正式停止支援（End-of-Life）。
+   - 依賴套件 ``pycli`` 已停止維護，且與現代 Python 不相容。
+   - 程式碼中 ``yaml.load()`` 在未指定 ``Loader`` 的情況下使用，屬於不安全的呼叫方式，在目前所有主流版本的 PyYAML 中均會引發警告或錯誤。
+   - 所產生 HTML 中使用的 Google Charts JavaScript API 端點（``jsapi?autoload=…``）已被 Google 棄用。
+   - 本專案不計劃進行任何主動開發或錯誤修正。
+
+   若您需要類似工具，建議以現代 Python 3 重新實作，並改用 ``click`` 或 ``argparse``、最新版 ``PyYAML``，以及目前的 Google Charts loader（``https://www.gstatic.com/charts/loader.js``）。
+
 - 楊維中 a.k.a zonble
 - zonble {at} gmail {dot} com
 - 2013/12/20

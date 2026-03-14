@@ -1,6 +1,20 @@
 yaml2timeline
 =============
 
+.. note::
+
+   **This project is no longer maintained and is considered legacy.**
+
+   The reasons include:
+
+   - It was written in 2013 and targets Python 2, which reached end-of-life in January 2020.
+   - The ``pycli`` dependency is unmaintained and incompatible with modern Python.
+   - ``yaml.load()`` (used without an explicit ``Loader``) is insecure and raises warnings in all current versions of PyYAML.
+   - The Google Charts JavaScript API endpoint used in the generated HTML (``jsapi?autoload=…``) has been deprecated by Google.
+   - No active development or bug fixes are planned.
+
+   If you need a similar tool, consider reimplementing it with modern Python 3, the ``click`` or ``argparse`` library, an up-to-date ``PyYAML``, and the current Google Charts loader (``https://www.gstatic.com/charts/loader.js``).
+
 - Weizhong Yang a.k.a zonble
 - zonble {at} gmail {dot} com
 - Friday, December 20, 2013
